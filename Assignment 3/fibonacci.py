@@ -1,0 +1,12 @@
+def fibonacci_series(n):
+    if n <= 0:
+        return 0
+    fib =[0] * (n + 1)
+    fib[1] = 1
+
+    for i in range(2, n):
+        fib[i] = fib[i - 1] + fib[i - 2]
+        fib.append(fib[i])
+    return fib
+
+print(fibonacci_series(10))
